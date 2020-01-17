@@ -16,7 +16,7 @@ MONITOR=LVDS1
 # xrandr --newmode "1920x1080_60.00"  172.80  1920 2040 2248 2576  1080 1081 1084 1118  -HSync +Vsync
 # xrandr --addmode VGA1 "1920x1080_60.00"
 # into script : xrandr --output VGA1 --mode "1920x1080_60.00"
-
+# sh -c "/path/to/the/script.sh"
 # functions to switch from LVDS1 to VGA and vice versa
 function ActivateVGA {
     #echo "Switching to VGA1"
@@ -26,7 +26,7 @@ function ActivateVGA {
 }
 function DeactivateVGA {
     #echo "Switching to eDP1"
-    xrandr --output $EXTERNAL --off --output $LAPTOP --auto
+    xrandr --output $EXTERNAL --off --output $LAPTOP --auto --primary
     MONITOR=$LAPTOP
 }
 
