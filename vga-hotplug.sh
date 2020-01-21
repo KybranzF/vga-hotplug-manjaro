@@ -21,7 +21,8 @@ MONITOR=LVDS1
 function ActivateVGA {
     #echo "Switching to VGA1"
     #xrandr --output $EXTERNAL --auto --output $LAPTOP --off
-    xrandr --output $EXTERNAL --mode "1920x1080_60.00" --right-of $LAPTOP --output $LAPTOP --auto --primary
+    #xrandr --output $EXTERNAL --mode "1920x1080_60.00" --right-of $LAPTOP --output $LAPTOP --auto --primary
+    xrandr --output $EXTERNAL --auto --right-of $LAPTOP --output $LAPTOP --auto --primary
     MONITOR=$EXTERNAL
 }
 function DeactivateVGA {
